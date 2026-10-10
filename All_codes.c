@@ -1315,30 +1315,308 @@
 
 //   #Code 61
 
-#include<stdio.h>
-void min_max(int n,int *min,int *max){
-        
+// #include <stdio.h>
+
+// void mystery(int *a, int *b)
+// {
+//     *a = *a + *b;
+//     *b = *a - *b;
+//     *a = *a - *b;
+// }
+
+// int main()
+// {
+//     int x = 7;
+//     int y = 12;
+
+//     mystery(&x, &y);
+
+//     printf("%d %d\n", x, y);
+//     return 0;
+// }
+
+//   #Code 62
+
+// #include<stdio.h>
+
+// int main(){
+//     int arr[6] = {4, 8, 15, 16, 23, 42};
+
+// int *p = arr;
+//     for(int i=5;i>=0;i--){
+//         printf("%d\n",*(p+i));
+//     }
+//     return 0;
+// }
+
+//   #Code 63
+
+// #include<stdio.h>
+
+// void reverse(int *arr)
+// { int n = 0;
+//     for (int i = 0, j = 3; i < 4 && j >= 0 && i < j; i++, j--){
+//         if(*(arr+i)!=*(arr+j)){
+//           n=*(arr + i);
+//          *(arr + i) = *(arr + j);
+//          *(arr + j) = n;}
+//     }
+// }
+
+// int main(){
+//     int arr[4]={1,2,3,4};
+//     int *p=arr;
+//     reverse(arr);
+//     for(int i=0;i<4;i++){
+//         printf("%d\n",*(p+i));
+//     }
+
+//     return 0;
+// }
+
+//   #Code 64
+
+// #include<stdio.h>
+
+// int has_pair_sum(int *arr, int target)
+// {
+//     for(int i=0;i<6;i++){
+//         for(int j=i;j<6;j++){
+//             if (*(arr + i )+ *(arr + j)==target){
+//                 printf("%d + %d = %d\n",*(arr + i ), *(arr + j), target);
+//             }
+//         }
+//     }
+// }
+
+// int main(){
+//    int arr[6] = {1, 3, 4, 6, 8, 11};
+// has_pair_sum(arr,14);
+//     return 0;
+// }
+
+//   #Code 65
+
+// #include<stdio.h>
+
+// int main(){
+//     int arr[] = {10, 20, 30, 40, 50};
+
+// int *p = arr + 1; =20
+// int *q = arr + 4; =50
+
+// printf("%d\n", *p++); =20
+// printf("%d\n", (*q)--); =50
+// printf("%d\n", *(p + 1)); =40
+// printf("%d\n", q[-2]); =30
+// printf("%ld\n", q - p); = -2
+//     return 0;
+// }
+
+//   #Code 66
+
+// #include <stdio.h>
+
+// void reverse(char *s)
+// {
+//     char *p = s;
+
+//     while (*p != '\0')
+//     {
+//         p++;
+//     }
+
+//     p--;
+
+//     while ( *s !=  *p){
+//         char n;
+//          n =  *s;
+//         *s = *p;
+//         *p = n;
+//         s++;
+//         p--;
+
+//     }
+// }
+
+// int main()
+// {
+//     char s[100];
+//     printf("Write the word: ");
+//     scanf("%s", s);
+//     reverse(s);
+//     printf("%s",s);
+//     return 0;
+// }
+
+//   #Code 67
+
+// #include <stdio.h>
+
+// void palindrome(char *s)
+// {
+//     char *p = s;
+//     int isPalindrome = 1;
+
+//     while (*p != '\0')
+//     {
+//         p++;
+//     }
+
+//     p--;
+
+//     while (s < p)
+//     {
+//         if (*s != *p)
+//         {
+//             isPalindrome = 0;
+//             break;
+//         }
+
+//         s++;
+//         p--;
+//     }
+
+//     if (isPalindrome)
+//     {
+//         printf("The word is palindrome");
+//     }
+//     else
+//     {
+//         printf("The word isnt palindrome");
+//     }
+// }
+
+// int main()
+// {
+//     char s[100];
+
+//     printf("Write the word: ");
+//     scanf("%s", s);
+
+//     palindrome(s);
+
+//     return 0;
+// }
+
+//   #Code 68
+
+// #include<stdio.h>
+// void compress(char *s){
+//     char *p =s;
+//     char *n =s;
+//     while(*p != '\0'){
+//         n++;
+//         if(*p ==*n){
+//             n++;
+
+//         }
+//         else{
+//             p++;
+//             *p=*n;
+//         }
+//     }
+//     printf("%s",s);
+// }
+
+// int main(){
+//     char s[100];
+//     printf("Write the name: ");
+//     scanf("%s",s);
+//     compress(s);
+//     return 0;
+// }
+
+//   #Code 69
+
+// #include <stdio.h>
+
+// void reverse(char *s)
+// {
+//     char *p = s;
+
+//     while (*p != '\0')
+//     {
+//         p++;
+//     }
+
+//     p--;
+
+//     while (s < p)
+//     {
+
+//         while (s < p &&
+//                !(*s == 'a' || *s == 'e' || *s == 'i' ||
+//                  *s == 'o' || *s == 'u'))
+//         {
+//             s++;
+//         }
+
+//         while (s < p &&
+//                !(*p == 'a' || *p == 'e' || *p == 'i' ||
+//                  *p == 'o' || *p == 'u'))
+//         {
+//             p--;
+//         }
+
+//         if (s < p)
+//         {
+//             char n = *s;
+//             *s = *p;
+//             *p = n;
+
+//             s++;
+//             p--;
+//         }
+//     }
+// }
+
+// int main()
+// {
+//     char s[100];
+
+//     printf("Write the word: ");
+//     scanf("%s", s);
+
+//     reverse(s);
+
+//     printf("%s", s);
+
+//     return 0;
+// }
+
+//   #Code 70
+
+#include <stdio.h>
+
+void reverse(char *s)
+{
+    char *p = s;
+
+    while (*p != '\0')
+    {
+        p++;
     }
 
-int main(){
-    int n;
-    printf("Write the no. of arrays: ");
-    scanf("%d",&n);
-    int arr[n];
-    int *p=arr;
-    for(int i=0;i<n;i++){
-        printf("Write the no.: ");
-        scanf("%d",p+i);
-    }
-    for(int i=0;i<n;i++){
-        printf("%d\n",*(p+i));
-    }
-    
-    
-    
+    p--;
 
-    
-    return 0;
+    while ( *s !=  *p){
+        char n;
+         n =  *s;
+        *s = *p;
+        *p = n;
+        s++;
+        p--;
+
+    }
 }
 
-
+int main()
+{
+    char s[100];
+    printf("Write the word: ");
+     fgets(s, sizeof(s), stdin);
+    reverse(s);
+    printf("%s",s);
+    return 0;
+}
