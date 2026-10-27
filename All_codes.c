@@ -1587,36 +1587,164 @@
 
 //   #Code 70
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void reverse(char *s)
-{
-    char *p = s;
+// void reverse(char *s)
+// {
+//     char *p = s;
 
-    while (*p != '\0')
-    {
-        p++;
-    }
+//     while (*p != '\0')
+//     {
+//         p++;
+//     }
 
-    p--;
+//     p--;
 
-    while ( *s !=  *p){
-        char n;
-         n =  *s;
-        *s = *p;
-        *p = n;
-        s++;
-        p--;
+//     while ( *s !=  *p){
+//         char n;
+//          n =  *s;
+//         *s = *p;
+//         *p = n;
+//         s++;
+//         p--;
 
-    }
-}
+//     }
+// }
 
-int main()
-{
-    char s[100];
-    printf("Write the word: ");
-     fgets(s, sizeof(s), stdin);
-    reverse(s);
-    printf("%s",s);
-    return 0;
-}
+// int main()
+// {
+//     char s[100];
+//     printf("Write the word: ");
+//      fgets(s, sizeof(s), stdin);
+//     reverse(s);
+//     printf("%s",s);
+//     return 0;
+// }
+
+//   #Code 71
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int *remove_value(
+//     const int *arr,
+//     int n,
+//     int target,
+//     int *new_size);
+
+// int main()
+// {
+//     int x;
+//     printf("Write the no. of arrays: ");
+//     scanf("%d", &x);
+//     int *arr = malloc(x * sizeof *arr);
+//     for (int i = 0; i < x; i++)
+//     {
+//         printf("Write the no.: ");
+//         scanf("%d", &arr[i]);
+//     }
+//     int target;
+//     printf("Write the target no.: ");
+//     scanf("%d", &target);
+//     int newsize = 0;
+//     for (int i = 0; i < x; i++)
+//     {
+//         if (arr[i] != target)
+//         {
+//             newsize++;
+//         }
+//     }
+//     int *n = malloc(newsize * sizeof *n);
+//     if (n == NULL)
+//         return 1;
+    
+//     for (int i = 0, j = 0; i < x; i++)
+//     {
+//         if (arr[i] != target)
+//         {
+//             n[j] = arr[i];
+//             j++;
+//         }
+//     }
+
+//     for (int i = 0; i < newsize; i++)
+//     {
+//         printf("%d\n", n[i]);
+//     }
+//     free(n);
+//     free(arr);
+//     return 0;
+// }
+
+//   #Code 72
+
+// #include<stdio.h>
+// #include<stdlib.h>
+
+// int main(){
+//     int row;
+//     int coloumn;
+//     printf("Write the no. of rows.: ");
+//     scanf("%d",&row);
+//      printf("Write the no. of coloumn.: ");
+//      scanf("%d",&coloumn);
+//     int **m = malloc(row * sizeof *m);
+//     for (int i = 0; i < row; i++)
+//     m[i] = malloc(coloumn * sizeof *m[i]);
+
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<coloumn;j++){
+//             printf("Write the no.: ");
+//             scanf("%d", &m[i][j]);
+//         }
+//     }
+//      int **n = malloc(coloumn * sizeof *n);
+//      for (int i = 0; i < coloumn; i++)
+//     n[i] = malloc(row * sizeof *n[i]);
+//        for (int i = 0; i < row; i++) {
+//         for (int j = 0; j < coloumn; j++) {
+//             n[j][i] = m[i][j];
+//         }
+//     }
+//   for(int i=0;i<coloumn;i++){
+//     for(int j=0;j<row;j++){
+//         printf("%d\n",n[i][j]);
+//     }
+//   }
+
+//     return 0;
+// }
+
+//   #Code 73
+
+// #include<stdio.h>
+// int sum_digits(int n){
+    
+//     if ( n==0){
+//         return 0;
+//     }
+//    return (n % 10) + sum_digits(n / 10);
+// }
+
+// int main(){
+//     printf("%d",sum_digits(583));
+//     return 0;
+// }
+
+//   #Code 74
+
+// fast_power(int n, int m){
+//     if(m==0)
+//     return 1;
+    
+//     return n*fast_power(n,m-1);
+// }
+// #include<stdio.h>
+
+// int main(){
+//     printf("%d",fast_power(3,5));
+//     return 0;
+// }
+
+//   #Code 75
+
