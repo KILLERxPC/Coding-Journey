@@ -1657,7 +1657,7 @@
 //     int *n = malloc(newsize * sizeof *n);
 //     if (n == NULL)
 //         return 1;
-    
+
 //     for (int i = 0, j = 0; i < x; i++)
 //     {
 //         if (arr[i] != target)
@@ -1719,7 +1719,7 @@
 
 // #include<stdio.h>
 // int sum_digits(int n){
-    
+
 //     if ( n==0){
 //         return 0;
 //     }
@@ -1736,7 +1736,7 @@
 // fast_power(int n, int m){
 //     if(m==0)
 //     return 1;
-    
+
 //     return n*fast_power(n,m-1);
 // }
 // #include<stdio.h>
@@ -1747,4 +1747,163 @@
 // }
 
 //   #Code 75
+
+// #include <stdio.h>
+
+// void reverse(int *arr, int n){
+//     int *a = arr;
+//     int *z = arr+(n-1);
+//     int temp;
+//     while ( a != z){
+//         temp = *a;
+//         *a = *z;
+//         *z = temp;
+//         a++;
+//         z--;
+
+//     }
+//     printf("Reversed: ");
+//     for(int i=0;i<n;i++){
+//         printf("%d ",*(arr+i));
+
+//        }
+// }
+
+// void min_max(const int *arr, int n, int *min, int *max)
+// {
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         *max = *arr;
+//         if (*max <= *(arr + i))
+//         {
+//             *max = *(arr + i);
+//         }
+//     }
+//     printf("\nMax: %d\n",*max);
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         *min = *arr;
+//         if (*min >= *(arr + i))
+//         {
+//             *min = *(arr + i);
+//         }
+//     }
+//     printf("Min: %d\n",*min);
+// }
+
+// int  count_even(const int *arr, int n){
+//     int even=0;
+//     for(int i=0;i<n;i++){
+//         if(*(arr+i)% 2 ==0 ){
+//             even++;
+//         }
+//     }
+//     printf("Even Count: %d\n",even);
+// }
+
+// int main()
+// {
+//     int n;
+//     printf("Write the no. of arrays: ");
+//     scanf("%d", &n);
+//     int arr[n];
+//     int *p = arr;
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("Write the value of array: ");
+//         scanf("%d", p + i);
+//     }
+//     int min, max;
+
+// reverse(arr,n);
+// min_max(arr, n, &min, &max);
+// count_even(arr,n);
+
+//     return 0;
+// }
+
+//   #Code 76
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     int row;
+//     int coloumn;
+//     printf("Write the no. of rows.: ");
+//     scanf("%d", &row);
+//     printf("Write the no. of coloumn.: ");
+//     scanf("%d", &coloumn);
+//     int **m = malloc(row * sizeof *m);
+//     for (int i = 0; i < row; i++)
+//         m[i] = malloc(coloumn * sizeof *m[i]);
+
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < coloumn; j++)
+//         {
+//             printf("Write the no.: ");
+//             scanf("%d", &m[i][j]);
+//         }
+//     }
+
+//         for (int i = 0; i < coloumn; i++)
+//     {
+//         for (int j = 0; j < row; j++)
+//         {
+//             printf("%d ",m[j][i]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+//   #Code 77
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int n;
+//     printf("Write the no. of arrays: ");
+//     scanf("%d", &n);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("Write the array: ");
+//         scanf("%d", &arr[i]);
+//     }
+//     int count = 0;
+//     while (count < n)
+//     {
+//         for (int i = 0; i < n; i++)
+//         {
+//             arr[i] = arr[i] - 5;
+//             if(arr[i]==0){
+//                 count++;
+//              printf("%d\n",i);
+//             }
+//             // if (arr[i] == 0){
+//             // {
+//         //         count++;
+//         //         for (int j = 0; j < n; j++)
+//         //         {
+//         //             if (arr[i] == arr[j])
+//         //             {
+//         //                 printf("%d\n", j);
+//         //             }
+//         //         }
+//         //     }
+//         }
+//     }
+//     return 0;
+// }
+
+//   #Code 78
+
+
 
